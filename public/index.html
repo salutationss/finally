@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Single Page</title>
+    <link rel="stylesheet" href="styles/Home.css" />
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <div class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="./about.html">About Me</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="./work.html">Work</a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div id="app">
+      <div class="fixed-section firstpage">
+        <h1 class="heading">Alex Blackburn CREATES</h1>
+        <img class="image" src="./assets/insta singer_-5.JPG" alt="" />
+        <div class="background">
+          <div class="bg-block"></div>
+        </div>
+        <div class="middleground">
+          <div class="mg-block"></div>
+        </div>
+        <div class="foreground">
+          <div class="fg-block"></div>
+        </div>
+      </div>
+
+      <div class="fixed-section secondpage">
+        <h1 class="heading">
+          <span>Alex</span>
+          <span>Blackburn</span>
+          <span>CREATES</span>
+        </h1>
+        <img src="./assets/about.jpg" class="about" />
+      </div>
+
+      <div class="thirdpage">
+        <div class="progress-line"></div>
+
+        <div class="title">
+          <h2>Hello Parallax</h2>
+        </div>
+
+        <div class="imgs">
+          <img
+            class="img img1"
+            src="https://placekitten.com/g/400/400"
+            alt=""
+          />
+          <img
+            class="img img2"
+            src="https://placekitten.com/g/400/500"
+            alt=""
+          />
+        </div>
+
+        <div class="bottom-sect"></div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/parallax.js" defer></script>
+  <script src="./js/slider.js" defer></script>
+</html>

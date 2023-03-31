@@ -9,11 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "csv-parse": "^5.3.6",
-    "html-minifier": "^4.0.0",
-    "watch": "^1.0.2"
-  },
   "dependencies": {
     "node-fetch": "^3.3.1"
   }

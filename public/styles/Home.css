@@ -98,6 +98,7 @@ a {
   left: calc(50vw - 350px);
   height: 400px;
   width: 400px;
+  padding-top: 20vh;
 }
 .img2 {
   left: calc(50vw - 50px);
@@ -141,7 +142,7 @@ a {
 .fg-block {
   background: #7b7979;
   position: absolute;
-  bottom: -45vh;
+  bottom: -50vh;
   left: 0;
   width: 100%;
   height: 60vh;
@@ -189,4 +190,43 @@ a {
   top: 0;
   transform: translate3d(0, -100%, 0);
   z-index: 0;
+}
+
+@media screen and (max-width: 760px) {
+  body {
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .thirdpage .title {
+    font-size: 4vw;
+  }
+  .thirdpage .imgs {
+    margin: 50px 0;
+  }
+  .img1 {
+    left: calc(50vw - 200px);
+    height: 250px;
+    width: 250px;
+  }
+  .img2 {
+    left: calc(50vw - 50px);
+    top: 16vw;
+    height: 200px;
+    width: 200px;
+  }
+  .heading {
+    font-size: 10vw;
+    left: 10vw;
+    bottom: 35vw;
+  }
+  .about {
+    width: 80vw;
+    left: 10vw;
+    bottom: 10vw;
+  }
+  .progress-line {
+    left: 10vw;
+  }
 }

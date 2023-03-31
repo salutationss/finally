@@ -12,6 +12,41 @@ main {
   height: 100vh;
 }
 
+header {
+  border-radius: 26.5px;
+  background-color: #000000;
+  border: 1px solid #001f61;
+  box-shadow: 0 16px 22px -17px #03153b;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 12px 20px 12px 20px;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 2em;
+  padding: 0.5rem 0;
+}
+a {
+  text-decoration: none;
+  color: #31e981;
+  padding: 2rem;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 .container {
   position: absolute;
   display: grid;

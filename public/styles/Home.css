@@ -96,10 +96,14 @@ a {
 
 .img1 {
   left: calc(50vw - 350px);
+  height: 400px;
+  width: 400px;
 }
 .img2 {
   left: calc(50vw - 50px);
   top: 16vw;
+  height: 300px;
+  width: 300px;
 }
 
 .thirdpage .title h2 {

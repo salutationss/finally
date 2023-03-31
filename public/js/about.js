@@ -46,7 +46,7 @@ function updateImages() {
 
   images.forEach((image, index) => {
     intersectionRatioIndex = windowWidth > 760 ? parseInt(index / 2) : index;
-    intersectionRatioValue = ratio + index - intersectionRatioIndex;
+    intersectionRatioValue = ratio - intersectionRatioIndex;
 
     setTransform(image, `translateY(${intersectionRatioValue * 70}px)`);
   });

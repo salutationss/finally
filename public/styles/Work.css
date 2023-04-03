@@ -120,70 +120,8 @@ img.slide {
   border-radius: 2rem 0 0 2rem;
 }
 
-.btn {
-  background-color: #2a265f;
-  border: 0;
-  border-radius: 50px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  font-size: 16px;
-  padding: 12px 25px;
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  letter-spacing: 1px;
-}
-
-.floating-btn {
-  border-radius: 26.5px;
-  background-color: #001f61;
-  border: 1px solid #001f61;
-  box-shadow: 0 16px 22px -17px #03153b;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  padding: 12px 20px;
-  position: fixed;
-  bottom: 20px;
-  right: 1100px;
-  z-index: 999;
-}
-
-.floating-btn:hover {
-  background-color: #ffffff;
-  color: #001f61;
-}
-
-.floating-btn:focus {
-  outline: none;
-}
-
-.floating-text {
-  background-color: #001f61;
-  border-radius: 10px 10px 0 0;
-  color: #fff;
-  font-family: "Muli";
-  padding: 7px 15px;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  z-index: 998;
-}
-
-.floating-text a {
-  color: #ff7500;
-  text-decoration: none;
-}
-
 @media screen and (max-width: 480px) {
   .social-panel-container.visible {
     transform: translateX(0px);
-  }
-
-  .floating-btn {
-    right: 10px;
   }
 }

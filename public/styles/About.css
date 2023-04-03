@@ -12,6 +12,27 @@ main {
   height: 100vh;
 }
 
+h1 {
+  width: 75vw;
+  padding: 5px;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fixed-title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: 999;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   border-radius: 26.5px;
   background-color: #000000;

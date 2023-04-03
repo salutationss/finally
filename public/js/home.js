@@ -8,6 +8,7 @@ const firstpage = document.querySelector(".firstpage");
 const thirdpage = document.querySelector(".third");
 const about = document.querySelector(".about");
 const app = document.querySelector("#app");
+const img = document.querySelector(".image");
 const imgs = document.querySelectorAll(".imgs .img");
 const progressLine = document.querySelector(".progress-line");
 
@@ -28,6 +29,7 @@ document.addEventListener("scroll", () => {
     bg.style.transform = `scale(${1 + 0.04 * perc})`;
     title.style.transform = `scale(${1 + 0.35 * perc})`;
     firstpage.style.opacity = `1`;
+    //img.style.transform = `scale(${1 + 0.1 * perc})`;
   } else if (yoff < TRANSITION_END) {
     // Fade transition
     const perc =

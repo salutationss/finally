@@ -12,25 +12,18 @@ main {
   height: 100vh;
 }
 
-h1 {
-  width: 75vw;
-  padding: 5px;
-  position: fixed;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .fixed-title {
   position: fixed;
+  display: flex;
   top: 0;
   left: 0;
-  width: 50vw;
+  width: 85vw;
   height: 100vh;
-  z-index: 999;
+  z-index: 2;
+  padding-left: 10vw;
+  padding-top: 50vh;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 header {

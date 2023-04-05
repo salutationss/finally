@@ -8,6 +8,8 @@ let container = document.querySelector(".container");
 let images = Array.from(document.querySelectorAll(".img_wrap"));
 console.log(images);
 
+const title = document.querySelector(".fixed-title");
+
 images.forEach((image, index) => {
   image.style.backgroundImage = `url(./images/${index + 1}.JPG)`;
 });
@@ -36,6 +38,7 @@ function smoothScroll() {
   target = window.scrollY;
 
   setTransform(container, `translateY(${-current}px)`);
+  setTransform(title, `translateY(${current}px)`);
   updateImages();
   requestAnimationFrame(smoothScroll);
 }

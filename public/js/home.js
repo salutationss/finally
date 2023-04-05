@@ -22,14 +22,14 @@ document.addEventListener("scroll", () => {
   const END_OF_PAGE = 3450;
 
   if (yoff < MOUNTAIN_SCALE_END) {
-    // Mountain Parallax
+    // Initial Parallax
     const perc = yoff / MOUNTAIN_SCALE_END;
     fg.style.transform = `scale(${1 + 0.4 * perc})`;
     mg.style.transform = `scale(${1 + 0.1 * perc})`;
     bg.style.transform = `scale(${1 + 0.04 * perc})`;
     title.style.transform = `scale(${1 + 0.35 * perc})`;
     firstpage.style.opacity = `1`;
-    //img.style.transform = `scale(${1 + 0.1 * perc})`;
+    //img.style.transform = `scale(${1 + 0.1 * perc})`; // figure out how to make this work
   } else if (yoff < TRANSITION_END) {
     // Fade transition
     const perc =

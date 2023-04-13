@@ -24,8 +24,10 @@
 
 .logo-header {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
+  right: 50%;
+  bottom: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
 }
@@ -186,8 +188,8 @@ section {
 .img-3 {
   position: absolute;
   top: 10%;
-  right: 2%;
-  width: 20%;
+  right: 0%;
+  width: 33%;
   height: 80%;
 }
 
@@ -206,7 +208,7 @@ section {
   height: 100%;
   background-size: cover;
   background-position: center;
-  filter: grayscale(20%) sepia(20%);
+  filter: grayscale(20%);
 }
 
 .Z {
@@ -217,7 +219,14 @@ section {
   z-index: 3;
 }
 
+.W {
+  z-index: 1;
+}
 
+.S{
+  right: 35%;
+  z-index: 3
+}
 
 @media screen and (max-width: 760px) {
   .container {

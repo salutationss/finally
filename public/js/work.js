@@ -73,17 +73,4 @@ slideArrowNext.addEventListener("click", () => {
   }
 });
 /*/ End of Slider /*/
-// DOM content loaded
-document.addEventListener("DOMContentLoaded", () => {
-  // populate 404 page when user tries to access a page that doesn't exist
-  const urlPaths = ["index.html", "about.html", "work.html"];
-  const path = [window.location.pathname];
-  if (urlPaths.includes(path)) {
-    document.querySelector("body").innerHTML = `
-  <div class="container">
-    <h1>404 Page Not Found</h1>
-    <p>Sorry, the page you are looking for does not exist.</p>
-  </div>
-`;
-  }
-});
+

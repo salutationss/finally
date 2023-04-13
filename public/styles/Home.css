@@ -17,8 +17,10 @@
 
 .logo-header {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
+  right: 50%;
+  bottom: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
 }
@@ -53,6 +55,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
 header {
   border-radius: 26.5px;
   background-color: #000000;

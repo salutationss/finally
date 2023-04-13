@@ -6,7 +6,6 @@
 }
 
 body {
-  background-image: linear-gradient(45deg, #a14ebf, #87bcde);
   font-family: "Muli", sans-serif;
   display: flex;
   align-items: center;
@@ -21,9 +20,10 @@ section.cards {
   max-width: fit-content;
   padding-left: 15px;
 }
+
 header {
   border-radius: 26.5px;
-  background-color: #001f61;
+  background-color: #000000;
   border: 1px solid #001f61;
   box-shadow: 0 16px 22px -17px #03153b;
   color: #fff;
@@ -36,6 +36,8 @@ header {
   right: 20px;
   z-index: 999;
 }
+
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -54,6 +56,7 @@ a {
   flex-direction: row;
   justify-content: flex-start;
 }
+
 img.slide {
   max-height: fit-content;
   max-width: 50%;
@@ -64,10 +67,11 @@ img.slide {
 .slider-wrapper {
   margin: 1rem;
   position: relative;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 .slides-container {
-  height: calc(100vh - 2rem);
+  height: 100%;
   display: flex;
   list-style: none;
   margin: 0;
@@ -133,8 +137,10 @@ img.slide {
 
 .logo-header {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
+  right: 50%;
+  bottom: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
 }
@@ -144,6 +150,13 @@ img.slide {
   display: inline-block;
   bottom: -20px;
   opacity: 0;
+}
+
+.work-img {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 10px;
+
 }
 
 .logo.active {
@@ -157,6 +170,7 @@ img.slide {
   opacity: 0;
   transition: ease-in-out 0.5s;
 }
+
 
 @media screen and (max-width: 480px) {
   .social-panel-container.visible {

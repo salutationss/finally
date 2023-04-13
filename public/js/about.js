@@ -1,11 +1,50 @@
+/* SPLASH ANIMATION */
+let intro = document.querySelector(".intro");
+let logo = document.querySelector(".logo-header");
+let logoSpan = document.querySelectorAll(".logo");
+
+window.addEventListener("DOMContentLoaded", () => {
+  //bg.style.display = "none";
+  setTimeout(() => {
+
+    logoSpan.forEach((span, idx) => {
+
+      setTimeout(() => {
+
+        span.classList.add("active");
+      }, (idx + 1) * 400);
+    });
+
+    setTimeout(() => {
+        
+        logoSpan.forEach((span, idx) => {
+  
+          setTimeout(() => {
+  
+            span.classList.remove("active");
+            span.classList.add("fade");
+          }, (idx + 1) * 50);
+        });
+    }, 2000)
+    
+    setTimeout(() => {
+      intro.style.top = "-100vh";
+      // reset the background
+    
+    }, 2300)
+  });
+});
+
+
+/* SCROLL EVENTS */
 let current = 0;
 let target = 0;
 let ease = 0.1;
 
 let windowWidth, containerHeight, imageHeight, skewDiff;
 
-let container = document.querySelector(".container");
-let images = Array.from(document.querySelectorAll(".img_wrap"));
+let container = document.querySelector(".scrollable");
+let images = Array.from(document.querySelectorAll(".wrap .img"));
 console.log(images);
 
 const title = document.querySelector(".fixed-title");

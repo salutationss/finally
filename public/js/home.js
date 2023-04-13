@@ -12,6 +12,45 @@ const img = document.querySelector(".image");
 const imgs = document.querySelectorAll(".imgs .img");
 const progressLine = document.querySelector(".progress-line");
 
+/*/ SPLASH PAGE /*/
+
+let intro = document.querySelector(".intro");
+let logo = document.querySelector(".logo-header");
+let logoSpan = document.querySelectorAll(".logo");
+
+window.addEventListener("DOMContentLoaded", () => {
+  // show nothing but the splash page
+  bg.style.display = "none";
+  setTimeout(() => {
+
+    logoSpan.forEach((span, idx) => {
+
+      setTimeout(() => {
+
+        span.classList.add("active");
+      }, (idx + 1) * 400);
+    });
+
+    setTimeout(() => {
+        
+        logoSpan.forEach((span, idx) => {
+  
+          setTimeout(() => {
+  
+            span.classList.remove("active");
+            span.classList.add("fade");
+          }, (idx + 1) * 50);
+        });
+    }, 2000)
+    
+    setTimeout(() => {
+      intro.style.top = "-100vh";
+    }, 2300)
+  });
+});
+
+/*/ SCROLL EVENTS /*/
+
 document.addEventListener("scroll", () => {
   console.log("We are scrolling!");
   const yoff = window.pageYOffset;

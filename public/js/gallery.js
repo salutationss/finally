@@ -3,38 +3,30 @@ let intro = document.querySelector(".intro");
 let logo = document.querySelector(".logo-header");
 let logoSpan = document.querySelectorAll(".logo");
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", ()=> {
   //bg.style.display = "none";
   setTimeout(() => {
-
     logoSpan.forEach((span, idx) => {
-
       setTimeout(() => {
-
         span.classList.add("active");
       }, (idx + 1) * 400);
     });
 
     setTimeout(() => {
-        
-        logoSpan.forEach((span, idx) => {
-  
-          setTimeout(() => {
-  
-            span.classList.remove("active");
-            span.classList.add("fade");
-          }, (idx + 1) * 50);
-        });
-    }, 2000)
-    
+      logoSpan.forEach((span, idx) => {
+        setTimeout(() => {
+          span.classList.remove("active");
+          span.classList.add("fade");
+        }, (idx + 1) * 50);
+      });
+    }, 2000);
+
     setTimeout(() => {
       intro.style.top = "-100vh";
       // reset the background
-    
-    }, 2300)
+    }, 2300);
   });
 });
-
 
 /* SCROLL EVENTS */
 let current = 0;
@@ -66,9 +58,9 @@ function setUpAnimation() {
   containerHeight = container.getBoundingClientRect().height;
   imageHeight =
     containerHeight / (windowWidth > 760 ? images.length / 2 : images.length);
-
   document.body.style.height = `${containerHeight}px`;
   smoothScroll();
+  console.log(containerHeight)
 }
 
 function smoothScroll() {
@@ -90,8 +82,9 @@ function updateImages() {
     intersectionRatioIndex = windowWidth > 760 ? parseInt(index / 2) : index;
     intersectionRatioValue = ratio - intersectionRatioIndex;
 
-    setTransform(image, `translateY(${intersectionRatioValue * 70}px)`);
+    setTransform(image, `translateY(${intersectionRatioValue * 20 }px)`);
   });
+
 }
 
 setUpAnimation();

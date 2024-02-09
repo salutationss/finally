@@ -2,13 +2,10 @@
   --main-bg-color: #ffffff;
 }
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
 }
 
 .intro {
@@ -30,6 +27,13 @@
   bottom: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
+}
+.logo.left {
+  position: absolute;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+  right: 0.25px;
 }
 
 .logo {
@@ -106,12 +110,11 @@ a {
 }
 
 .wrap {
-  position: relative;
-  display: block;
   line-height: auto;
   overflow: hidden;
   transition: 0.5s;
   will-change: transform;
+  color: #000000;
 }
 
 .wrap h1,
@@ -131,7 +134,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 0;
 }
 
@@ -225,11 +228,49 @@ section {
 
 .S{
   right: 35%;
-  z-index: 3
+  z-index: 1
 }
 
-@media screen and (max-width: 760px) {
-  .container {
-    grid-template-columns: 100%;
+
+
+@media screen and (max-width: 480x) {
+  .fixed-title {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 15vw;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .intro {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #161616;
+    transition: 1s; 
+  }
+  .logo-header {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+  }
+  .logo.left {
+    position: absolute;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+    right: 0.25px;
+  }
+  .logo {
+    padding: 10px;
+    margin-right: 10px;
+    
   }
 }
+  
+  

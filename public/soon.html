@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/Soon.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="intro">
+    <h1 class="logo-header">
+      <span class="logo left">i</span>
+      <span class="logo">CREATE</span>
+    </h1>
+  </div>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <div class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </div>
+              <div class="nav-item">
+                <a class="nav-link" href="./gallery.html">Gallery</a>
+              </div>
+              <div class="nav-item">
+                <a class="nav-link" href="./soon.html">Work</a>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </header>
+    <div class="header">
+        <div class="soon">
+        <h1>UNDER CONSTRUCTION</h1>
+        <hr>
+        <p>Constructing this page now and working to bring you the best experience possible.</p>
+        <h5>Page will be ready in:</h5>
+        <p id="launch"></p>
+        </div>
+    </div>
+
+    <script>
+        const countDownDate = new Date("May 2, 2023 00:00:00").getTime();
+
+        const x = setInterval(function() {
+
+        const now = new Date().getTime();
+            
+        const distance = countDownDate - now;
+            
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+        document.getElementById("launch").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+            
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("launch").innerHTML = "LAUNCHED";
+        }
+        }, 1000);
+    </script>
+    <script src="./js/gallery.js"></script>
+</body>
+</html>

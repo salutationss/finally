@@ -11,6 +11,7 @@ const app = document.querySelector("#app");
 const img = document.querySelector(".image");
 const imgs = document.querySelectorAll(".imgs .img");
 const progressLine = document.querySelector(".progress-line");
+const heading = document.querySelector("strong");
 
 /*/ SPLASH PAGE /*/
 
@@ -19,8 +20,9 @@ let logo = document.querySelector(".logo-header");
 let logoSpan = document.querySelectorAll(".logo");
 
 window.addEventListener("DOMContentLoaded", () => {
-  // show nothing but the splash page
   bg.style.display = "none";
+
+
   setTimeout(() => {
 
     logoSpan.forEach((span, idx) => {
@@ -32,14 +34,13 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     setTimeout(() => {
-        
+      //span.classList.add("left")
         logoSpan.forEach((span, idx) => {
-  
-          setTimeout(() => {
-  
+
+          setTimeout(() => {  
             span.classList.remove("active");
             span.classList.add("fade");
-          }, (idx + 1) * 50);
+          }, (idx + 2) * 50);
         });
     }, 2000)
     
@@ -58,6 +59,7 @@ document.addEventListener("scroll", () => {
   const MOUNTAIN_SCALE_END = 500;
   const TRANSITION_END = 800;
   const WORD_SPLIT_END = 2300;
+  const NEW_SPLIT = 2000
   const END_OF_PAGE = 3450;
 
   if (yoff < MOUNTAIN_SCALE_END) {
@@ -78,6 +80,7 @@ document.addEventListener("scroll", () => {
     titleParts[0].style.transform = `translate3d(0, 0, 0)`;
     titleParts[1].style.transform = `translate3d(0, 0, 0)`;
     titleParts[2].style.transform = `translate3d(0, 0, 0)`;
+    
   } else if (yoff < WORD_SPLIT_END) {
     // Word splitting
     title.style.transform = `scale(1.35)`;
@@ -111,7 +114,7 @@ document.addEventListener("scroll", () => {
 
     const offset = yoff - WORD_SPLIT_END;
     const duration = END_OF_PAGE - WORD_SPLIT_END;
-    app.style.transform = `translate3d(0, -${offset}px, 0)`;
+    app.style.transform = `translate3d(0, -${offset}px, 0)`; 
     imgs[0].style.transform = `translate3d(0, -${offset * 0.1}px, 0)`;
     imgs[1].style.transform = `translate3d(0, -${offset * 0.25}px, 0)`;
 

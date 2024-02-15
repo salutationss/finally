@@ -1,74 +1,74 @@
+/* CSS Variables */
+:root {
+  --main-bg-color: #161616;
+  --text-color: #fff;
+  --accent-color: #31e981;
+  --font-size: 16px;
+  --border-radius: 5rem;
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Header */
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/3.JPG);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/3.JPG);
   height: 100vh;
   background-size: cover;
   background-position: center;
 }
 
+/* Coming Soon */
 .soon {
-  color: #fff;
+  color: var(--text-color);
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: #fff 1px solid;
+  border: var(--text-color) 1px solid;
   padding: 20px;
-  box-shadow: #595959 0px 0px 10px;
-  border-radius: 5rem;
+  box-shadow: 0px 0px 10px #595959;
+  border-radius: var(--border-radius);
 }
 
-hr {
-  width: 50%;
-  margin: 30px auto;
-  border: 1px solid #fff;
+/* Typography */
+body {
+  font-size: var(--font-size);
+  color: var(--text-color);
 }
 
 p {
   font-size: 20px;
   margin-bottom: 30px;
 }
-header {
-  border-radius: 26.5px;
-  background-color: #000000;
-  border: 1px solid #001f61;
-  box-shadow: 0 16px 22px -17px #03153b;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  padding: 12px 20px 12px 20px;
-  position: fixed;
-  bottom: 70px;
-  right: 20px;
-  z-index: 999;
-}
 
+/* Navigation */
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  border-radius: 2em;
   padding: 0.5rem 0;
 }
+
 a {
   text-decoration: none;
-  color: #31e981;
+  color: var(--accent-color);
   padding: 2rem;
 }
+
 .navbar-nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
+/* Intro */
 .intro {
   position: fixed;
   z-index: 1;
@@ -76,42 +76,40 @@ a {
   top: 0;
   width: 100%;
   height: 100vh;
-  background: #161616;
+  background: var(--main-bg-color);
   transition: 1s;
 }
 
-.logo-header {
+/* Logos */
+.logo-header, .logo {
   position: absolute;
+  color: var(--text-color);
+  transition: ease-in-out 0.5s;
+}
+
+.logo-header {
   top: 50%;
   left: 50%;
-  right: 50%;
-  bottom: 50%;
   transform: translate(-50%, -50%);
-  color: #ffffff;
-}
-.logo.left {
-  position: absolute;
-  display: inline-block;
-  bottom: -20px;
-  opacity: 0;
-  right: 0.25px;
 }
 
-.logo {
-  position: absolute;
-  display: inline-block;
-  bottom: -20px;
-  opacity: 0;
-}
-
-.logo.active {
+.logo.active, .logo.fade {
   bottom: 0;
   opacity: 1;
-  transition: ease-in-out 0.5s;
 }
 
 .logo.fade {
   bottom: 150px;
   opacity: 0;
-  transition: ease-in-out 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .soon, .header {
+    height: auto;
+  }
 }
